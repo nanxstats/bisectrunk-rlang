@@ -1,0 +1,1 @@
+PKG_CPPFLAGS += -DENABLE_LEGACY_NONAPI -include $(BISECTRUNK_PROJECT)/../rlang-r46-compat.h

@@ -1,17 +1,16 @@
 # Bisecting the gsDesign regression through rlang
 
-This repository is a minimal reproduction of the downstream snapshot
-regression fixed by
+A minimal reproduction of the downstream snapshot regression fixed by
 [keaven/gsDesign#283](https://github.com/keaven/gsDesign/pull/283).
-It uses `bisectrunk` to search rlang from v1.1.7 (`7a519a2`) through `b7b9861`
-while holding gsDesign and ggplot2 fixed.
+It uses [bisectrunk](https://crates.io/crates/bisectrunk) to search rlang
+from v1.1.7 (`7a519a2`) through `b7b9861` while holding gsDesign and ggplot2
+versions fixed.
 
 ## Requirements
 
 - Git and `curl`.
 - R and the toolchain required to compile R packages.
-- [`bisectrunk`](https://crates.io/crates/bisectrunk) on `PATH`, for example,
-  from `cargo install bisectrunk`.
+- `bisectrunk` on `PATH`, for example, from `cargo install bisectrunk`.
 
 The harness includes a compile-only compatibility header for R 4.6.
 It exposes legacy R declarations needed by older rlang commits without
